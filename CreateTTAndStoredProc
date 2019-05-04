@@ -1,0 +1,20 @@
+Use CallWebApiDev
+--DROP PROCEDURE usp_call_web_api;
+--DROP TYPE [dbo].[tt_save_api_data];
+
+CREATE TYPE [dbo].[tt_save_api_data] AS TABLE(
+[UserId] [INT] NOT NULL,
+[PostId] [INT] NOT NULL,
+[Title] [VARCHAR](254),
+[Body] [VARCHAR](1016)
+)
+GO
+CREATE PROCEDURE [dbo].[usp_call_web_api]
+@dt dbo.tt_save_api_data READONLY
+AS
+BEGIN
+INSERT INTO [dbo].WebApiData(UserId, PostId,Title,Body)
+SELECT UserId, PostId, Title, Body
+FROM @dt
+END
+GO
