@@ -1,5 +1,5 @@
 Use CallWebApiDev
---drop table WebApiData
+---drop table WebApiData
 Create table WebApiData(
 ID INT PRIMARY KEY,
 UserId INT NOT NULL,
