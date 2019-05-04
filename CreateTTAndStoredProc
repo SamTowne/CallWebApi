@@ -1,5 +1,5 @@
 Use CallWebApiDev
---DROP PROCEDURE usp_call_web_api;
+----DROP PROCEDURE usp_call_web_api;
 --DROP TYPE [dbo].[tt_save_api_data];
 
 CREATE TYPE [dbo].[tt_save_api_data] AS TABLE(
