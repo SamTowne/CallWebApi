@@ -1,0 +1,9 @@
+Use CallWebApiDev
+--drop table WebApiData
+Create table WebApiData(
+ID INT PRIMARY KEY,
+UserId INT NOT NULL,
+PostId INT NOT NULL,
+Title VARCHAR(254),
+Body VARCHAR(1016),
+)
